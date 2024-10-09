@@ -1,0 +1,30 @@
+Overall Look and Feel of Fika Canada
+====================================
+When someone visits FikaCanada, they’ll feel welcomed by the warm colors and easy navigation. The site feels inviting, making it easy to explore travel options and plan a trip. 
+It gives a sense of comfort, like you're in good hands as you start your journey.
+
+Colours
+========
+For Fika Canada, colours expose our personality to the customers and represent that we are calm and pleasing.
+These are our color swatches:
+
+- #FF6F61
+- #4A90E2
+- #2E8B57
+- #FFD700
+- #FF7F50
+- #A9A9A9
+- #40E0D0
+
+Iconography
+===========
+We aim to have a modern and clean design that aligns with the themes of travel and adventure. 
+By using simple lines and shapes to ensure clarity and scalability, so the icons look good on various devices.
+
+Typography
+==========
+We will be using Times New Roman from Google Fonts.
+
+Buttons
+=======
+Buttons will have the "pressed effect".
