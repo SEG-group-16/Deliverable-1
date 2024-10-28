@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À propos de nous</title>
+    <link rel="stylesheet" th:href="@{/css/style3.css}">
+    <link rel="stylesheet" th:href="@{/css/style1.css}">
+</head>
+
+<body>
+    <header>
+        <div id="entete0"></div>
+        <div id="entete">
+            <a th:href="@{/}">Accueil</a>
+            <a th:href="@{/services}">Services</a>
+            <a th:href="@{/about}">À propos de nous</a>
+            <a th:href="@{/review}">Avis</a>
+        </div>
+        <div id="entete1">
+            <a th:href="@{/contact}">Contact</a>
+            <a th:href="@{/sign-in}">Connexion</a>
+        </div>
+    </header>
+
+    <div class="tete">
+        <div class="sous">
+            <h1>À propos de nous</h1>
+        </div>
+    </div>
+
+    <p>
+        Notre équipe est composée de spécialistes passionnés, chacun ayant une expertise unique <br>
+        dans une région du monde ou un type de voyage particulier. Des conseillers en voyages <br>
+        et coordinateurs logistiques, chaque membre de notre équipe est là pour vous offrir une expérience <br>
+        sans stress et sur-mesure. Que vous soyez un aventurier chevronné ou un voyageur occasionnel,<br>
+        nous vous guidons pas à pas pour que votre expérience soit exactement comme vous l'imaginiez.<br>
+    </p>
+
+    <footer>
+        <div class="c1">
+            <a th:href="@{/sign-in}">Connexion</a>
+            <a th:href="@{/reservation}">Réservation</a>
+        </div>
+        <div class="c1">
+            <a th:href="@{/free}">Gratuit</a>
+            <a th:href="@{/reduced-services}">Services à frais réduits</a>
+            <a th:href="@{/premium}">Premium</a>
+        </div>
+        <div class="c1">
+            <a th:href="@{/travel-tips}">Nos conseils de voyages</a>
+            <a th:href="@{/destinations}">Nos destinations</a>
+            <a th:href="@{/commitments}">Nos engagements</a>
+        </div>
+        <div class="c1">
+            <a th:href="@{/faq}">Foire aux questions</a>
+            <a th:href="@{/why-us}">Pourquoi nous choisir</a>
+            <a th:href="@{/testimonials}">Témoignages</a>
+        </div>
+    </footer>
+</body>
+</html>
