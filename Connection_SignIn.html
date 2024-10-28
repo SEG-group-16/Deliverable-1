@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>connection</title>
+    <title>Connection</title>
     <link rel="stylesheet" href="../css/style1.css">
     <link rel="stylesheet" href="../css/connection.css">
+    <style>
+        .error { color: red; font-size: 0.9em; }
+    </style>
 </head>
+<body>
 <header>
-    <div id="entete0">
-
-    </div>
+    <div id="entete0"></div>
     <div id="entete">
        <a href="../index.html">Home</a>
        <a href="services.html">Services</a>
@@ -19,21 +21,28 @@
     </div>
     <div id="entete1">
         <a href="/page.html/contact.html">Contact</a>
-        <a href="/page.html/connection.html"> Sign In </a>
+        <a href="/page.html/connection.html">Sign In</a>
     </div>
 </header>
-<body>
+
+<main>
+    <form id="connectionForm">
         <div class="l1">
             <label for="name">Nom :</label>
             <input type="text" id="name" name="name" placeholder="Votre nom" required>
-        </div>
-        <div class="l1">   
-            <label for="email">Email :</label>
-            <input type="email" id="email" name="email" placeholder="Votre email" required>
+            <span id="nameError" class="error"></span>
         </div>
         <div class="l1">
-            <label for="email">Mot de passe :</label>
-            <input type="email" id="password" name="password" placeholder="mot de passe" required>
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" placeholder="Votre email" required>
+            <span id="emailError" class="error"></span>
+        </div>
+        <div class="l1">
+            <label for="password">Mot de passe :</label>
+            <input type="password" id="password" name="password" placeholder="mot de passe" required>
+            <span id="passwordError" class="error"></span>
+            <br>
+            <label><input type="checkbox" id="showPassword"> Montrer le mot de passe</label>
         </div>
         <div class="l1">
             <label><input type="checkbox" name="subscribe" value="yes"> Recevoir les notifications</label>
@@ -41,17 +50,18 @@
         <div class="l1">
             <input type="submit" value="S'abonner">
         </div>
-</body>
+    </form>
+</main>
+
 <footer>
     <div class="c1">
-        
         <a href="connection.html">SIGN IN</a>
-        <a href="reservation.html">reservation</a>
+        <a href="reservation.html">Reservation</a>
     </div>
     <div class="c1">
         <a href="free.html">Free</a>
         <a href="moindre.html">Services à frais réduits</a>  
-        <a href="premuin.html">premium</a>
+        <a href="premuin.html">Premium</a>
     </div>
     <div class="c1">
         <a href="conseils de voyages.html">Nos conseils de voyages</a>
@@ -60,8 +70,61 @@
     </div>
     <div class="c1">
         <a href="FAQ.html">Foire aux questions</a>
-        <a href="pourquoi .html">Pourquoi nous choisir </a>
+        <a href="pourquoi.html">Pourquoi nous choisir</a>
         <a href="temoignages.html">Témoignages</a>
     </div>
 </footer>
+
+<script>
+    document.getElementById('connectionForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        let isValid = true;
+
+        // Validate Name
+        const name = document.getElementById('name').value;
+        const nameError = document.getElementById('nameError');
+        if (name.length < 2) {
+            nameError.textContent = 'Nom doit avoir au moins 2 caractères.';
+            isValid = false;
+        } else {
+            nameError.textContent = '';
+        }
+
+        // Validate Email
+        const email = document.getElementById('email').value;
+        const emailError = document.getElementById('emailError');
+        const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,6}$/;
+        if (!emailPattern.test(email)) {
+            emailError.textContent = 'Veuillez entrer un email valide.';
+            isValid = false;
+        } else {
+            emailError.textContent = '';
+        }
+
+        // Validate Password
+        const password = document.getElementById('password').value;
+        const passwordError = document.getElementById('passwordError');
+        if (password.length < 6) {
+            passwordError.textContent = 'Le mot de passe doit avoir au moins 6 caractères.';
+            isValid = false;
+        } else {
+            passwordError.textContent = '';
+        }
+
+        if (isValid) {
+            alert("Formulaire soumis avec succès!");
+            // Normally, here you would submit the form
+            // e.g., this.submit();
+        }
+    });
+
+    // Toggle password visibility
+    document.getElementById('showPassword').addEventListener('change', function() {
+        const passwordInput = document.getElementById('password');
+        passwordInput.type = this.checked ? 'text' : 'password';
+    });
+</script>
+
+</body>
 </html>
